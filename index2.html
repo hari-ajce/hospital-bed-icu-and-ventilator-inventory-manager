@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hospital Bed, ICU &amp; Ventilator Manager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Hospital bed, ICU &amp; ventilator manager</h1>
+  <div id="stats"></div>
+</header>
+
+<main>
+  <section class="card">
+    <div id="tabs"></div>
+    <div id="map"></div>
+    <div id="detail">Select a bed on the map to assign, release or transfer.</div>
+  </section>
+
+  <aside>
+    <section>
+      <h2>Find medicine or equipment</h2>
+      <input id="q" placeholder="Try &quot;para&quot;, &quot;vent&quot; or &quot;SRG-3&quot;" autocomplete="off">
+      <ul id="results"></ul>
+    </section>
+    <section>
+      <h2>Recent ICU beds <small>freed or assigned in the last hour</small></h2>
+      <ul id="recent"></ul>
+      <div class="row">
+        <input id="rp" placeholder="Patient name">
+        <button class="btn" id="rbtn">Assign newest free bed</button>
+      </div>
+    </section>
+    <section>
+      <h2>Ward transfer requests</h2>
+      <ul id="transfers"></ul>
+    </section>
+  </aside>
+</main>
+
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
